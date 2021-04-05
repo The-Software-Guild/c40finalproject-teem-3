@@ -5,9 +5,15 @@ export function NavBar() {
     return (
         <div className={styles['nav-bar']}>
             <div className={styles.left}>
-                <input value="Search Category"/>
-                <input value="City/Zipcode"/>
-                <button> Search </button>
+                <div class="field has-addons">
+                    <p class="control">
+                        <button class="button is-static">Search</button>
+                    </p>
+                    <p class="control">
+                        <input class="input" type="text" placeholder="japanese, mediterian, itallian..." />
+                    </p>
+    
+                </div>
             </div>
             <div className={styles.right}>
                 <button> Login </button>
