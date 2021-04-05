@@ -9,6 +9,16 @@ am4core.useTheme(am4themes_animated);
 
 
 class InteractiveMap extends React.Component{
+    info = {
+                stateData : [
+                        {"id":"US-CA",
+                        "name": "California",
+                        "value" : 100
+                        },
+                ]
+    }
+
+
     componentDidMount() {
         //create map object
         let map = am4core.create("chartdiv", am4maps.MapChart);
@@ -20,11 +30,15 @@ class InteractiveMap extends React.Component{
         //this will create the state borders
         let polygonSeries = new am4maps.MapPolygonSeries();
         polygonSeries.useGeodata = true;
+
+
+        //populate the series with our own data that we will get from the Yelp API
+        polygonSeries.data = this.info.stateData;
         map.series.push(polygonSeries);
 
         //template to allow hover / tooltips
         let polygonTemplate = polygonSeries.mapPolygons.template;
-        polygonTemplate.tooltipText = "{name}";
+        polygonTemplate.tooltipText = "{name} : {value}";
         polygonTemplate.fill =am4core.color("#659DBD");
 
         let hoverState = polygonTemplate.states.create("hover");
@@ -33,9 +47,14 @@ class InteractiveMap extends React.Component{
 
         //allows on click zoom functionality
         polygonTemplate.events.on("hit",function(ev){
-                    ev.target.series.chart.zoomToMapObject(ev.target,2);
+                    console.log(ev.target.dataItem.dataContext);
+                    ev.target.series.chart.zoomToMapObject(ev.target);
                 });
 
+        //can also have an over functionality that can show information
+//        polygonTemplate.events.on("over",function(ev){
+//
+//        })
         this.map = map;
       }
 
