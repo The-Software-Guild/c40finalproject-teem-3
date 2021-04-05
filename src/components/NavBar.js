@@ -5,12 +5,12 @@ export function NavBar() {
     return (
         <div className={styles['nav-bar']}>
             <div className={styles.left}>
-                <div class="field has-addons">
-                    <p class="control">
-                        <button class="button is-static">Search</button>
+                <div className="field has-addons">
+                    <p className="control">
+                        <button className="button is-static is-medium">Search</button>
                     </p>
-                    <p class="control">
-                        <input class="input" type="text" placeholder="japanese, mediterian, itallian..." />
+                    <p className="control">
+                        <input className="input is-medium" type="text" placeholder="japanese, mediterian, itallian..." />
                     </p>
     
                 </div>

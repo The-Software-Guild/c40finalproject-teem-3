@@ -1,6 +1,6 @@
 import React from 'react'
 import * as am4core from "@amcharts/amcharts4/core";
-import * as am4charts from "@amcharts/amcharts4/charts";
+//import * as am4charts from "@amcharts/amcharts4/charts";
 import * as am4maps from "@amcharts/amcharts4/maps"
 import am4geodata_usaLow from "@amcharts/amcharts4-geodata/usaLow";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
@@ -34,7 +34,7 @@ class InteractiveMap extends React.Component{
 
   render() {
     return (
-                <div id="chartdiv" style={{position: "absolute",top:0,right:0,bottom:0,left:0}}></div>
+                <div id="chartdiv" style={{position: "absolute",top: 100, right:0,bottom:0,left:0}}></div>
     );
   }
 
