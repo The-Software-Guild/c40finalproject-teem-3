@@ -10,15 +10,19 @@ am4core.useTheme(am4themes_animated);
 
 class InteractiveMap extends React.Component{
     componentDidMount() {
+        //create map object
         let map = am4core.create("chartdiv", am4maps.MapChart);
 
-
+        //populate map with USA GeoData
         map.geodata = am4geodata_usaLow;
         map.projection = new am4maps.projections.AlbersUsa();
+
+        //this will create the state borders
         let polygonSeries = new am4maps.MapPolygonSeries();
         polygonSeries.useGeodata = true;
         map.series.push(polygonSeries);
 
+        //template to allow hover / tooltips
         let polygonTemplate = polygonSeries.mapPolygons.template;
         polygonTemplate.tooltipText = "{name}";
         polygonTemplate.fill =am4core.color("#659DBD");
@@ -27,6 +31,7 @@ class InteractiveMap extends React.Component{
 
         hoverState.properties.fill = am4core.color("#3c5e71");
 
+        //allows on click zoom functionality
         polygonTemplate.events.on("hit",function(ev){
                     ev.target.series.chart.zoomToMapObject(ev.target,2);
                 });
