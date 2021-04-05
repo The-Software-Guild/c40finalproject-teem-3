@@ -21,7 +21,7 @@ class InteractiveMap extends React.Component{
 
         let polygonTemplate = polygonSeries.mapPolygons.template;
         polygonTemplate.tooltipText = "{name}";
-        polygonTemplate.fill =am4core.color("#74B266");
+        polygonTemplate.fill =am4core.color("#659DBD");
 
         this.chart = chart;
       }

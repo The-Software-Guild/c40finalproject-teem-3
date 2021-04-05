@@ -10,7 +10,7 @@ export function NavBar() {
                         <button class="button is-static">Search</button>
                     </p>
                     <p class="control">
-                        <input class="input" type="text" placeholder="japanese, mediterian, itallian..." />
+                        <input class="input" type="text" placeholder="Japanese, Mediterranean, Italian..." />
                     </p>
     
                 </div>
