@@ -10,14 +10,14 @@ am4core.useTheme(am4themes_animated);
 
 class InteractiveMap extends React.Component{
     componentDidMount() {
-        let chart = am4core.create("chartdiv", am4maps.MapChart);
+        let map = am4core.create("chartdiv", am4maps.MapChart);
 
 
-        chart.geodata = am4geodata_usaLow;
-        chart.projection = new am4maps.projections.AlbersUsa();
+        map.geodata = am4geodata_usaLow;
+        map.projection = new am4maps.projections.AlbersUsa();
         let polygonSeries = new am4maps.MapPolygonSeries();
         polygonSeries.useGeodata = true;
-        chart.series.push(polygonSeries);
+        map.series.push(polygonSeries);
 
         let polygonTemplate = polygonSeries.mapPolygons.template;
         polygonTemplate.tooltipText = "{name}";
@@ -26,13 +26,17 @@ class InteractiveMap extends React.Component{
         let hoverState = polygonTemplate.states.create("hover");
 
         hoverState.properties.fill = am4core.color("#3c5e71");
-        
-        this.chart = chart;
+
+        polygonTemplate.events.on("hit",function(ev){
+                    ev.target.series.chart.zoomToMapObject(ev.target,2);
+                });
+
+        this.map = map;
       }
 
   componentWillUnmount() {
-    if (this.chart) {
-      this.chart.dispose();
+    if (this.map) {
+      this.map.dispose();
     }
   }
 
