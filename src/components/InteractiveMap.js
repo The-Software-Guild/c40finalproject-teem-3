@@ -21,11 +21,11 @@ class InteractiveMap extends React.Component{
 
         let polygonTemplate = polygonSeries.mapPolygons.template;
         polygonTemplate.tooltipText = "{name}";
-        polygonTemplate.fill =am4core.color("#74B266");
+        polygonTemplate.fill =am4core.color("#659DBD");
 
         let hoverState = polygonTemplate.states.create("hover");
 
-        hoverState.properties.fill = am4core.color("#367B25");
+        hoverState.properties.fill = am4core.color("#3c5e71");
         
         this.chart = chart;
       }
