@@ -26,11 +26,11 @@
 }
 
 .input:focus {
-  width: 400px;
+  width: 350px;
 }
 
 .zipCode{
-    width: 100px;  
+    width: 55px;  
   -webkit-transition: width .35s ease-in-out;
   transition: width .35s ease-in-out;
      border-radius: 10px;
@@ -41,7 +41,7 @@
 }
 
 .zipCode:focus{
-    width: 200px;
+    width: 100px;
 }
 
 .button{
