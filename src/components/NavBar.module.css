@@ -59,6 +59,16 @@ button{
     cursor: pointer;
 }
 
+a{
+    color: #eff5f8;
+    text-decoration: none;
+    display: inline-block;     
+   position: relative;    
+   z-index: 1;     
+   padding: 2em;     
+   margin: -2em; 
+}
+
 img{
     margin-right: 300px;
 }
