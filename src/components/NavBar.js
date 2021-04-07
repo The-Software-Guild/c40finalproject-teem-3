@@ -4,7 +4,7 @@ import styles from './NavBar.module.css'
 import melpLogo from './melpLogo.png'
 import AboutUs from '../pages/AboutUs'
 
-export default function NavBar() {
+export function NavBar() {
     return (
         <div className={styles['nav-bar']}>
     
