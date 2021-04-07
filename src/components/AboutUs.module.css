@@ -1,0 +1,19 @@
+
+h1{
+    color: #3c5e71;
+    text-align: center;
+    margin-top: 1em;
+    font-size: 4em;
+}
+
+p{
+    text-align: center;
+    margin: auto;
+    max-width: 900px;
+    padding: 2em;
+    margin-bottom: 1em;
+    color: #eff5f8;
+    background-color: #659DBD;
+    border-radius: 10px;
+}
+

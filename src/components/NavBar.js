@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { BrowserRouter , Redirect } from 'react-router-dom';
 import styles from './NavBar.module.css'
 import melpLogo from './melpLogo.png'
+import AboutUs from '../pages/AboutUs'
 
-export function NavBar() {
+export default function NavBar() {
     return (
         <div className={styles['nav-bar']}>
     
@@ -17,7 +19,9 @@ export function NavBar() {
          
                 <button> Login </button>
                 <button> Sign Up </button>
-                <button> About Us </button>
+                <button><a href="/AboutUs">About Us </a></button>
+                <button><a href="/Home">Home </a></button>       
+        
             </div>
         </div>
 
