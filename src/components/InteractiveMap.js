@@ -7,28 +7,6 @@ import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 
 am4core.useTheme(am4themes_animated);
 
-//const API_URL = "https://api.yelp.com/v3";
-//const API_KEY = "";
-//const BUSINESS_SEARCH = "/businesses/search";
-//const BUSINESS_DETAILS = "/business/";
-//const CATEGORY_SEARCH = "/categories";
-
-
-
-//const config = {
-//        headers:{
-//            'Authorization' : 'Bearer ' + API_KEY
-//        },
-//
-//        params : {
-//            term : 'restaurants',
-//            categories : "caribbean", // can be changed
-//            location : "91732", // can be changed
-//            limit : 10,
-//            sort_by : 'rating'
-//        }
-//}
-
 class InteractiveMap extends React.Component{
         info = {
                 yelpData: [
@@ -128,7 +106,6 @@ class InteractiveMap extends React.Component{
 
     showPointsOfInterest(){
 
-
         let placeSeries = this.map.series.push(new am4maps.MapImageSeries());
 
         let placeTemplate = placeSeries.mapImages.template;
@@ -169,14 +146,7 @@ class InteractiveMap extends React.Component{
 
         return mapPointData;
     }
-    showData(){
 
-        this.info.yelpData.map((data,i) =>{
-                console.log(i);
-                console.log(data);
-            })
-
-    }
 
     //may have to change condition
     componentDidUpdate(oldProps){
@@ -224,7 +194,7 @@ class InteractiveMap extends React.Component{
 
 
         this.map = map;
-        console.log(this.map);
+//        console.log(this.map);
         this.showPointsOfInterest();
 
       }
