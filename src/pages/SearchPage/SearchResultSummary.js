@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from './SearchResultSummary.module.css'
 
-export function SearchResultsSummary(){
+export function SearchResultsSummary(props){
     return(
         <div className={styles['container']}> 
             <div className={styles['search-summary']}>
                 <p id="search_Category" className="subtitle">
-                    Japanese, <strong> Texas </strong>
+                    Category: {props.term} | Zip-code: {props.location}
                 
                 </p>
                 <p>
