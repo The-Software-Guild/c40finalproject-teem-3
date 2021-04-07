@@ -1,23 +1,19 @@
 import React from 'react';
 import styles from './SearchResults.module.css';
+import { SearchResult } from './SearchResult'
 
-export function SearchResults() {
+export function SearchResults(props) {
 
+    if (!props.businesses || !props.businesses.length){
+        return <div></div>
+    }
+
+
+    const searchResults = props.businesses.map(b => <SearchResult key={b.id} businesses={b}/>)
+    
     return(
-        <div className={styles['search-result']}>
-            <div className={styles['business-image']}>
-                <img src='https://via.placeholder.com/150' alt='business'/>
-            </div>
-            <div className={styles['business-info']}>
-                <p>Restaurant_Name </p>
-                <p>Price Range: </p> 
-                <p>Rating: | Total Reviews</p>
-            </div>
-            <div>
-                <p>Phone Number</p>
-                <p>Street</p>
-                <p>Zipcode, City</p>
-            </div>
+        <div className={styles['search-results']}>
+            {searchResults}
         </div>
     );
 }
