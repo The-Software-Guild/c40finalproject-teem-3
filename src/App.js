@@ -8,11 +8,11 @@ import { NavBar } from './components/NavBar'
 const App = () => {
   let history = useHistory();
 
-  const search = (term, location) =>{ 
-      const urlEncodedTerm = encodeURI(term);
+  const search = (category, location) =>{ 
+      const urlEncodedCategory = encodeURI(category);
       const urlEncodedLocation = encodeURI(location);
-      console.log(urlEncodedTerm, urlEncodedLocation);
-      let path = '/search?find_desc=' + urlEncodedTerm + '&find_loc=' + urlEncodedLocation;
+      console.log(urlEncodedCategory, urlEncodedLocation);
+      let path = '/search?find_desc=' + urlEncodedCategory + '&find_loc=' + urlEncodedLocation;
       history.push(path);
       history.go(0);
   }
