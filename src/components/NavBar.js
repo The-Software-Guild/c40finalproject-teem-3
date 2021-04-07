@@ -6,8 +6,11 @@ export function NavBar(props) {
 
     const [term, setTerm] = useState(props.term || '');
     const [location, setLocation] = useState(props.location || '');
-
+  
     function submit(e){
+        if (typeof props.search === 'function'){
+            props.search(term, location);
+        }
         console.log(term, location);
         e.preventDefault();
     }
@@ -17,8 +20,7 @@ export function NavBar(props) {
     
                 <div className="field has-addons">
                     
-                        <img src={melpLogo} alt="Melp Logo" width="150" />
-                                                            
+                        <img src={melpLogo} alt="Melp Logo" width="150" /> 
                         <input className={styles.zipCode} 
                             onChange={(e) => setLocation(e.target.value)}
                             type="text" 
