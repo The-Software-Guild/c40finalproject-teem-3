@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
-import { BrowserRouter , Redirect } from 'react-router-dom';
+import React from 'react';
 import styles from './NavBar.module.css'
 import melpLogo from './melpLogo.png'
-import AboutUs from '../pages/AboutUs'
 
 export function NavBar() {
     return (
