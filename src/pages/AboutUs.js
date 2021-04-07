@@ -1,10 +1,6 @@
 import React from 'react';
-import  NavBar from '../components/NavBar'
-import styles from '../components/AboutUs.module.css'
 
-
-
-export default function AboutUs() {
+export function AboutUs() {
     
         return(
         
@@ -21,4 +17,3 @@ export default function AboutUs() {
 
     );
 }
-
