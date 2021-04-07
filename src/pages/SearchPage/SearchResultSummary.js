@@ -2,16 +2,21 @@ import React from 'react'
 import styles from './SearchResultSummary.module.css'
 
 export function SearchResultsSummary(props){
+    let resultStats = null; 
+    if(props.amountResults && props.shownResults){
+        resultStats = <strong>
+            Showing 1-{props.shownResults} out of {props.amountResults} results
+        </strong>
+    }
+
     return(
         <div className={styles['container']}> 
             <div className={styles['search-summary']}>
                 <p id="search_Category" className="subtitle">
-                    Category: {props.term} | Zip-code: {props.location}
+                    Category: <strong> {props.term}</strong> | Zip-code: <strong> {props.location} </strong>
                 
                 </p>
-                <p>
-                    Showing 1-20 out of 543 results
-                </p>
+                {resultStats}
             </div>
             <div className={styles.filters}>
                 

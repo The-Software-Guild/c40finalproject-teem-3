@@ -13,7 +13,12 @@ export function SearchPage() {
 
     return(
         <div>
-            <SearchResultsSummary term={term} location={locationParam}/>
+            <SearchResultsSummary 
+                term={term} 
+                location={locationParam} 
+                amountResults = {amountResults} 
+                shownResults = {businesses ? businesses.length : 0}    
+            />
             <SearchResults businesses={businesses}/>
         </div>
     );
