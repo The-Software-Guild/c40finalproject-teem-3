@@ -17,7 +17,9 @@ export function NavBar() {
          
                 <button> Login </button>
                 <button> Sign Up </button>
-                <button> About Us </button>
+                <button><a href="/AboutUs">About Us </a></button>
+                <button><a href="/Home">Home </a></button>       
+        
             </div>
         </div>
 
