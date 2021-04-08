@@ -9,12 +9,8 @@ export function SearchPage() {
     const params = new URLSearchParams(location.search);
     const term = params.get('find_desc');
     const locationParam = params.get('find_loc');
-<<<<<<< HEAD
-    const [businesses, amountResults] = useBusinessSearch(category, locationParam);
-=======
     const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(term, locationParam);
->>>>>>> parent of 4d1f803 (Fetching Categories Given Zipcode)
-
+    
     return(
         <div>
             <SearchResultsSummary 
