@@ -11,7 +11,8 @@ export function useBusinessSearch(categories, location){
         const fetchData = async () =>{
             try{
                 const rawData = await api.get('/businesses/search?', searchParams);
-                const resp = await rawData.json();
+                console.log(rawData);
+                const resp = await rawData;
                 setBusinesses(resp.businesses);
                 setAmountResults(resp.total); 
             }catch(e){

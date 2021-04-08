@@ -13,7 +13,7 @@ export function SearchResultsSummary(props){
         <div className={styles['container']}> 
             <div className={styles['search-summary']}>
                 <p id="search_Category" className="subtitle">
-                    Category: <strong> {props.category}</strong> | Zip-code: <strong> {props.location} </strong>
+                    Category: <strong> {props.categories}</strong> | Zip-code: <strong> {props.location} </strong>
                 
                 </p>
                 {resultStats}

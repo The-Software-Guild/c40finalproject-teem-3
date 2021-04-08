@@ -1,22 +1,27 @@
-import {API_BASE_URL} from './config';
 import queryString from 'query-string'
-// THIS FUNCTION REQUIRES AN API KEY/ TOKEN IN LIKE 15
-export function get(path, queryParams){
-    const query = queryString.stringify(queryParams);
+import axios from 'axios';
 
-    let baseAPI = API_BASE_URL;
-    //let token = BEARER_TOKEN;
-    //let sort_by = "&sort_by=distance";
-    let fetchURL = baseAPI + path + query; 
+export function get(path, queryParams) {
+    const query = queryString.stringify(queryParams);
+    let fetchURL = "/v3" + path + query;
+    let API_Key = ''; //API KEY HERE
+    let bearer = 'Bearer ' + API_Key;
     console.log(fetchURL);
-    //alert(fetchURL);
-    return fetch(fetchURL, {
+
+    let results = axios.get(fetchURL,
+    {
         headers: {
-                'Authorization': 'Bearer TOKEN-HERE',
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json',
-                "accepts":"application/json"
-            }
-    });
+            'Authorization': bearer,
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+            "accepts":"application/json"
+        }
+    })
+    .then(res => {
+        const info = res.data;
+        //console.log(typeof info);
+        return info;
+    })
+    return results;
 }
 
