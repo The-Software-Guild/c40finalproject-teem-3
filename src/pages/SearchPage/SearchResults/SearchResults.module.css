@@ -1,5 +1,10 @@
 .search-result{
     display: flex;
+    background: #dce0e5;
+    color: #3c5e71;
+    height: 300px;
+    margin-bottom: 5em;
+    border-radius: 4px;
 }
 
 .business-image{
@@ -11,6 +16,13 @@
 .business-info{
     width: 210px;
     height: 210px;
+    border-radius: 4px;
+    margin-right: 4px;
+}
+
+.business-address{
+    width: 210px;
+    height: 100px;
     border-radius: 4px;
     margin-right: 4px;
 }
