@@ -9,7 +9,7 @@ export function SearchPage() {
     const params = new URLSearchParams(location.search);
     const category = params.get('find_desc');
     const locationParam = params.get('find_loc');
-    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(category, locationParam);
+    const [businesses, amountResults] = useBusinessSearch(category, locationParam);
 
     return(
         <div>

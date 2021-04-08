@@ -4,10 +4,37 @@ import * as am4core from "@amcharts/amcharts4/core";
 import * as am4maps from "@amcharts/amcharts4/maps"
 import am4geodata_usaLow from "@amcharts/amcharts4-geodata/usaLow";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
+//import {mapBusinessSearch} from '../pages/hooks/yelp-api/mapBusinessSearch';
 
 am4core.useTheme(am4themes_animated);
 
 class InteractiveMap extends React.Component{
+        region = {
+            states:[
+                {
+                    "name":"Alabama",
+                    "cities":[
+                        {
+                            "name":"Birmingham"
+                        },
+                        {
+                            "name":"Huntsville"
+                        },
+                        {
+                            "name":"Montgomery"
+                        },
+                        {
+                            "name":"Mobile"
+                        },
+                        {
+                            "name":"Tuscaloosa"
+                        }
+                    ]
+                }, 
+                //add more states below... or load from CSV (/src/pythonScraper/statesPop.csv)
+            ]
+        }
+
         info = {
                 yelpData: [
                             {
@@ -128,6 +155,18 @@ class InteractiveMap extends React.Component{
 //        this.setState({map : map})
     }
 
+    // fetch API passing city names to (mapBusinessSearch)
+    // get data and add to this.info list
+    addPopularCities(){
+        let mapPointData = []
+        this.region.states.map( (state,i) => {
+            state.cities.map( (city,j) => {
+                let newYelpData = {};
+
+            })
+        })
+    }
+
     generatePointData(){
         //need latitude
                 //longitude
@@ -204,6 +243,7 @@ class InteractiveMap extends React.Component{
       this.map.dispose();
     }
   }
+
 
   render() {
     return (

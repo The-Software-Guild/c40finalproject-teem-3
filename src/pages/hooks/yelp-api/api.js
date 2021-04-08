@@ -1,6 +1,6 @@
-import {API_BASE_URL, BEARER_TOKEN} from './config';
+import {API_BASE_URL} from './config';
 import queryString from 'query-string'
-
+// THIS FUNCTION REQUIRES AN API KEY/ TOKEN IN LIKE 15
 export function get(path, queryParams){
     const query = queryString.stringify(queryParams);
 
@@ -12,7 +12,7 @@ export function get(path, queryParams){
     //alert(fetchURL);
     return fetch(fetchURL, {
         headers: {
-                'Authorization': 'Bearer AXt1BDHyPI46wJAWpSL-6M088HhGFDSl7bYNZk4E_FUmA1TXgrU4ffBYHSugH8_CcjEkkTfO9JfSSMPlEiCn4Qgm1YuoNpAFe8WT52cgSVW-jEzKkaqFDrjD_C1uYHYx',
+                'Authorization': 'Bearer TOKEN-HERE',
                 'Access-Control-Allow-Origin': '*',
                 'Content-Type': 'application/json',
                 "accepts":"application/json"
