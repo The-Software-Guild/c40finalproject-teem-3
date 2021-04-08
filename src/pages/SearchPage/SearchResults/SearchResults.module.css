@@ -1,28 +1,40 @@
 .search-result{
     display: flex;
-    background: #dce0e5;
-    color: #3c5e71;
+    background: #3c5e71;
+    color: #778899;
     height: 300px;
-    margin-bottom: 5em;
-    border-radius: 4px;
+    margin-bottom: 3em;
+    border-radius: 10px;
+    border: solid 2px #778899;
 }
 
 .business-image{
     width: 210px;
     height: 210px;
-    border-radius: 4px;
+    border-radius: 10px;
+    border: 1px solid #778899;
+    margin: 1em;
+    
 }
 
-.business-info{
+.business-info p{
     width: 210px;
-    height: 210px;
-    border-radius: 4px;
+    height: 80px;
     margin-right: 4px;
+    background: #3c5e71 !important;
+    color: #778899;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
-.business-address{
+.business-address p{
     width: 210px;
     height: 100px;
-    border-radius: 4px;
     margin-right: 4px;
+    background: #3c5e71 !important;
+    color: #778899;
+    padding: 0;
+    margin-top: 10px;
+     font-size: 1.2em;
 }
