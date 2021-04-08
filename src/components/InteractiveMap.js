@@ -11,6 +11,7 @@ am4core.useTheme(am4themes_animated);
 class InteractiveMap extends React.Component {
     state = {
         loading: false,
+        cleanedMapPointData: [],
         mapPointData: [],
         states: [
             {
@@ -21,8 +22,7 @@ class InteractiveMap extends React.Component {
                     },
                     {
                         "name": "Huntsville"
-                    }
-                    /*
+                    },
                     {
                         "name": "Montgomery"
                     },
@@ -32,7 +32,7 @@ class InteractiveMap extends React.Component {
                     {
                         "name": "Tuscaloosa"
                     }
-                    */
+                    
                 ]
             }
             //add more states below... or load from CSV (/src/pythonScraper/statesPop.csv)
@@ -132,7 +132,7 @@ class InteractiveMap extends React.Component {
         let placeTemplate = placeSeries.mapImages.template;
 
         let circle = placeTemplate.createChild(am4core.Circle);
-        circle.radius = 100;
+        circle.radius = 10;
         circle.fill = am4core.color("#B27799");
         circle.stroke = am4core.color("#FFFFFF");
         circle.strokeWidth = 2;
@@ -143,8 +143,18 @@ class InteractiveMap extends React.Component {
         //        place.nonScaling = false;
         placeTemplate.propertyFields.latitude = "latitude";
         placeTemplate.propertyFields.longitude = "longitude";
-
-        placeSeries.data = this.state.mapPointData;
+        let cleanMapPointData = [];
+        this.state.mapPointData.map((business, k) => {
+            console.log(business)
+            let data = {};
+            data["name"] = business.name;
+            data["longitude"] = business.coordinates.longitude;
+            data["latitude"] = business.coordinates.latitude;
+            cleanMapPointData.push(data);
+            this.setState({cleanedMapPointData: cleanMapPointData});
+        })
+        
+        placeSeries.data = this.state.cleanedMapPointData;
         //console.log(placeSeries.data)
         //        this.setState({map : map})
     }
