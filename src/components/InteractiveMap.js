@@ -5,6 +5,7 @@ import * as am4maps from "@amcharts/amcharts4/maps"
 import am4geodata_usaLow from "@amcharts/amcharts4-geodata/usaLow";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import axios from 'axios';
+import cityStates from '../pythonScraper/mostPopCityInState.json';
 
 am4core.useTheme(am4themes_animated);
 
@@ -13,44 +14,27 @@ class InteractiveMap extends React.Component {
         loading: false,
         cleanedMapPointData: [],
         mapPointData: [],
-        states: [
-            {
-                "name": "Alabama",
-                "cities": [
-                    {
-                        "name": "Birmingham"
-                    },
-                    {
-                        "name": "Huntsville"
-                    },
-                    {
-                        "name": "Montgomery"
-                    },
-                    {
-                        "name": "Mobile"
-                    },
-                    {
-                        "name": "Tuscaloosa"
-                    }
-                    
-                ]
-            }
+        states: cityStates
+
             //add more states below... or load from CSV (/src/pythonScraper/statesPop.csv)
-        ]
+
     }
 
     componentDidMount() {
         console.log("App is now mounted.")
-        this.setState({ loading: true })
+        this.setState({ loading: true, })
+
+//        console.log(this.state.states)
+//        console.log(cityAndStateData)
         console.log("Loading businesses data")
         this.state.states.map((state, i) => {
             state.cities.map((city, j) => {
-                //console.log(city);
+                console.log(city);
                 let path = "/v3/businesses/search?location=" + city.name + "&limit=1";
                 axios.get(path,
                     {
                         headers: {
-                            'Authorization': 'Bearer TN1_Qg2qSyxlLk1bkJvfn7rWM57xfDyHSVrC90jfpRAB6hiJ74bbBwVofqYc9vTJJwjt0JyzgfIfjp-TxMvkIdz5EcQlAcaQ3E8u3fQruTvDYBjfXsW_UsVe2CxvYHYx',
+                            'Authorization': 'Bearer 8bzvw3fDl9VH96QencxdFeUK6t-ksZvnbMU0qwTHPQuMdmrqb79ky71zkLbRpUeBifjtOtgYN9UJOxpVHPgIvqG_WK3Rj-gpVQCcvoB21lRsKKWODk-sA9ZxMWlrYHYx',
                             'Access-Control-Allow-Origin': '*',
                             'Content-Type': 'application/json',
                             "accepts": "application/json"
@@ -64,8 +48,8 @@ class InteractiveMap extends React.Component {
                             
 
                         this.setState({mapPointData: this.state.mapPointData.concat(business), loading:false})
-                        console.log(res.data.businesses);
-                        console.log(this.state.mapPointData);
+//                        console.log(res.data.businesses);
+//                        console.log(this.state.mapPointData);
                         this.showPointsOfInterest();
 
                         //const info = res.data['businesses'];
@@ -110,7 +94,7 @@ class InteractiveMap extends React.Component {
         //allows on click zoom functionality
         polygonTemplate.events.on("hit", function (ev) {
             let data = ev.target.dataItem.dataContext;
-            console.log(data);
+//            console.log(data);
             ev.target.series.chart.zoomToMapObject(ev.target);
             //                    map.geodata = states.
 
@@ -132,7 +116,7 @@ class InteractiveMap extends React.Component {
         let placeTemplate = placeSeries.mapImages.template;
 
         let circle = placeTemplate.createChild(am4core.Circle);
-        circle.radius = 10;
+        circle.radius = 5;
         circle.fill = am4core.color("#B27799");
         circle.stroke = am4core.color("#FFFFFF");
         circle.strokeWidth = 2;
@@ -145,7 +129,7 @@ class InteractiveMap extends React.Component {
         placeTemplate.propertyFields.longitude = "longitude";
         let cleanMapPointData = [];
         this.state.mapPointData.map((business, k) => {
-            console.log(business)
+//            console.log(business)
             let data = {};
             data["name"] = business.name;
             data["longitude"] = business.coordinates.longitude;

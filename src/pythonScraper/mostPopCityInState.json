@@ -1,0 +1,402 @@
+[
+  {
+    "name": "Alabama",
+    "cities": [
+      {
+        "name": "Birmingham"
+      }
+    ]
+  },
+  {
+    "name": "Alaska",
+    "cities": [
+      {
+        "name": "Anchorage"
+      }
+    ]
+  },
+  {
+    "name": "Arizona",
+    "cities": [
+      {
+        "name": "Phoenix"
+      }
+    ]
+  },
+  {
+    "name": "Arkansas",
+    "cities": [
+      {
+        "name": "Little Rock"
+      }
+    ]
+  },
+  {
+    "name": "California",
+    "cities": [
+      {
+        "name": "Los Angeles"
+      }
+    ]
+  },
+  {
+    "name": "Colorado",
+    "cities": [
+      {
+        "name": "Denver"
+      }
+    ]
+  },
+  {
+    "name": "Connecticut",
+    "cities": [
+      {
+        "name": "Bridgeport"
+      }
+    ]
+  },
+  {
+    "name": "Delaware",
+    "cities": [
+      {
+        "name": "Wilmington"
+      }
+    ]
+  },
+  {
+    "name": "Florida",
+    "cities": [
+      {
+        "name": "Jacksonville"
+      }
+    ]
+  },
+  {
+    "name": "Georgia",
+    "cities": [
+      {
+        "name": "Atlanta"
+      }
+    ]
+  },
+  {
+    "name": "Hawaii",
+    "cities": [
+      {
+        "name": "Honolulu"
+      }
+    ]
+  },
+  {
+    "name": "Idaho",
+    "cities": [
+      {
+        "name": "Boise"
+      }
+    ]
+  },
+  {
+    "name": "Illinois",
+    "cities": [
+      {
+        "name": "Chicago"
+      }
+    ]
+  },
+  {
+    "name": "Indiana",
+    "cities": [
+      {
+        "name": "Indianapolis"
+      }
+    ]
+  },
+  {
+    "name": "Iowa",
+    "cities": [
+      {
+        "name": "Des Moines"
+      }
+    ]
+  },
+  {
+    "name": "Kansas",
+    "cities": [
+      {
+        "name": "Wichita"
+      }
+    ]
+  },
+  {
+    "name": "Kentucky",
+    "cities": [
+      {
+        "name": "Louisville"
+      }
+    ]
+  },
+  {
+    "name": "Louisiana",
+    "cities": [
+      {
+        "name": "New Orleans"
+      }
+    ]
+  },
+  {
+    "name": "Maine",
+    "cities": [
+      {
+        "name": "Portland"
+      }
+    ]
+  },
+  {
+    "name": "Maryland",
+    "cities": [
+      {
+        "name": "Baltimore"
+      }
+    ]
+  },
+  {
+    "name": "Massachusetts",
+    "cities": [
+      {
+        "name": "Boston"
+      }
+    ]
+  },
+  {
+    "name": "Michigan",
+    "cities": [
+      {
+        "name": "Detroit"
+      }
+    ]
+  },
+  {
+    "name": "Minnesota",
+    "cities": [
+      {
+        "name": "Minneapolis"
+      }
+    ]
+  },
+  {
+    "name": "Mississippi",
+    "cities": [
+      {
+        "name": "Jackson"
+      }
+    ]
+  },
+  {
+    "name": "Missouri",
+    "cities": [
+      {
+        "name": "Kansas City"
+      }
+    ]
+  },
+  {
+    "name": "Montana",
+    "cities": [
+      {
+        "name": "Billings"
+      }
+    ]
+  },
+  {
+    "name": "Nebraska",
+    "cities": [
+      {
+        "name": "Omaha"
+      }
+    ]
+  },
+  {
+    "name": "Nevada",
+    "cities": [
+      {
+        "name": "Las Vegas"
+      }
+    ]
+  },
+  {
+    "name": "New Hampshire",
+    "cities": [
+      {
+        "name": "Manchester"
+      }
+    ]
+  },
+  {
+    "name": "New Jersey",
+    "cities": [
+      {
+        "name": "Newark"
+      }
+    ]
+  },
+  {
+    "name": "New Mexico",
+    "cities": [
+      {
+        "name": "Albuquerque"
+      }
+    ]
+  },
+  {
+    "name": "New York",
+    "cities": [
+      {
+        "name": "New York City"
+      }
+    ]
+  },
+  {
+    "name": "North Carolina",
+    "cities": [
+      {
+        "name": "Charlotte"
+      }
+    ]
+  },
+  {
+    "name": "North Dakota",
+    "cities": [
+      {
+        "name": "Fargo"
+      }
+    ]
+  },
+  {
+    "name": "Ohio",
+    "cities": [
+      {
+        "name": "Columbus"
+      }
+    ]
+  },
+  {
+    "name": "Oklahoma",
+    "cities": [
+      {
+        "name": "Oklahoma City"
+      }
+    ]
+  },
+  {
+    "name": "Oregon",
+    "cities": [
+      {
+        "name": "Portland"
+      }
+    ]
+  },
+  {
+    "name": "Pennsylvania",
+    "cities": [
+      {
+        "name": "Philadelphia"
+      }
+    ]
+  },
+  {
+    "name": "Rhode Island",
+    "cities": [
+      {
+        "name": "Providence"
+      }
+    ]
+  },
+  {
+    "name": "South Carolina",
+    "cities": [
+      {
+        "name": "Charleston"
+      }
+    ]
+  },
+  {
+    "name": "South Dakota",
+    "cities": [
+      {
+        "name": "Sioux Falls"
+      }
+    ]
+  },
+  {
+    "name": "Tennessee",
+    "cities": [
+      {
+        "name": "Nashville"
+      }
+    ]
+  },
+  {
+    "name": "Texas",
+    "cities": [
+      {
+        "name": "Houston"
+      }
+    ]
+  },
+  {
+    "name": "Utah",
+    "cities": [
+      {
+        "name": "Salt Lake City"
+      }
+    ]
+  },
+  {
+    "name": "Vermont",
+    "cities": [
+      {
+        "name": "Burlington"
+      }
+    ]
+  },
+  {
+    "name": "Virginia",
+    "cities": [
+      {
+        "name": "Virginia Beach"
+      }
+    ]
+  },
+  {
+    "name": "Washington",
+    "cities": [
+      {
+        "name": "Seattle"
+      }
+    ]
+  },
+  {
+    "name": "West Virginia",
+    "cities": [
+      {
+        "name": "Charleston"
+      }
+    ]
+  },
+  {
+    "name": "Wisconsin",
+    "cities": [
+      {
+        "name": "Milwaukee"
+      }
+    ]
+  },
+  {
+    "name": "Wyoming",
+    "cities": [
+      {
+        "name": "Cheyenne"
+      }
+    ]
+  }
+]
