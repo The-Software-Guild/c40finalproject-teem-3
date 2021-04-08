@@ -7,13 +7,14 @@ import {useBusinessSearch} from '../hooks/yelp-api/useBusinessSearch';
 export function SearchPage() {
     const {location} = useHistory();
     const params = new URLSearchParams(location.search);
-    const term = params.get('find_desc');
+    const categories = params.get('find_desc');
     const locationParam = params.get('find_loc');
-    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(term, locationParam);
+    const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(categories, locationParam);
+
     return(
         <div>
             <SearchResultsSummary 
-                term={term} 
+                categories={categories} 
                 location={locationParam} 
                 amountResults = {amountResults} 
                 shownResults = {businesses ? businesses.length : 0}    
