@@ -11,11 +11,11 @@ export function SearchResult(props) {
     const addressLines = props.business.location.display_address.map(addressLine => <span key={props.business.id + addressLine}> {addressLine} </span>);
     return(
         <div className={styles['search-result']}>
+                 <h2>{props.business.name} </h2>
             <div className={styles['business-image']}>
                 <img className={styles['business-image']} src={props.business.image_url} alt='business'/>
-            </div>
-            <div className={styles['business-info']}>
-                <strong>{props.business.name} </strong>
+           
+         
                
             </div>
             <div className={styles['business-info']}>

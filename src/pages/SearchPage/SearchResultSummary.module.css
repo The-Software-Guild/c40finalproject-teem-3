@@ -1,45 +1,35 @@
 
+.search-summary p{
+    font-size: 2.2em;
+    background-color: #dce0e5;
+    color: #3c5e71;
+}
+
+
+
 .container{
     background: #dce0e5;
     border: 1px solid #778899;
     border-radius: 10px;
     color: #3c5e71;
-    margin-bottom: 5em;
+    margin-bottom: 3em;
     justify-content: center;
     width: 100%;
 }
 
-.search-summary p{
-    font-size: 2em;
-    background: #dce0e5;
-    color: #3c5e71;
+
+
+
+h2{
+ font-size: 1.5em;
+ margin-left: 10px;
+    color: #659DBD;
 }
 
-
-.filters{
-    background: rgb(245,245,245);
-}
-
-.business-image{
-    border-radius: 10px;
-    padding: 2em;
-}
-
-.search-results{
-    padding: 10em;
-    display: flex;
-    flex-flow: row nowrap;
-    align-content: center;
-    width: 100%;
-}
-
-.business-info h2{
-    font-size: 1em;
-    color: #778899;
-}
-
-.business-info p{
-    background-color: #dce0e5;
-    color: #3c5e71;
+div{
+    margin: .5em;
+    
+    
+    
 }
 
