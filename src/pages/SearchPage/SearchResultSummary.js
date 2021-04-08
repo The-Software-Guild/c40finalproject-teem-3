@@ -15,7 +15,7 @@ export function SearchResultsSummary(props){
                 <p id="search_Category" className="subtitle">
                     Category: <strong> {props.categories}</strong> | Zip-code: <strong> {props.location} </strong>
                 
-                </p>
+                </p> 
                 {resultStats}
             </div>
             <div className={styles.filters}>

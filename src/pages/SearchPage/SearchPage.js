@@ -3,6 +3,7 @@ import {SearchResultsSummary} from './SearchResultSummary'
 import {SearchResults} from './SearchResults/SearchResults'
 import { useHistory , useParams} from 'react-router-dom';
 import {useBusinessSearch} from '../hooks/yelp-api/useBusinessSearch';
+import styles from './SearchResultSummary.module.css'
 
 export function SearchPage() {
     const {location} = useHistory();

@@ -15,15 +15,13 @@ export function SearchResult(props) {
                 <img className={styles['business-image']} src={props.business.image_url} alt='business'/>
             </div>
             <div className={styles['business-info']}>
-                <strong>{props.business.name} </strong>
+                <h2>{props.business.name} </h2>
                 <p>Price Range: {props.business.price}</p> 
                 <p>Rating: {props.business.rating}</p>
                 <p>Total Reviews: {props.business.review_count}</p>
-                
-            </div>
-            <div>
                 <p>{props.business.phone}</p>
                 {addressLines}
+               
             </div>
         </div>
     );

@@ -31,7 +31,7 @@ export function NavBar(props) {
                         <input className={styles.zipCode} 
                             onChange={(e) => setLocation(e.target.value)}
                             type="text" 
-                            placeholder="Zip Code" />
+                            placeholder="Zip Code" required/>
 
                         <input className={styles.input} 
                             onChange={(e) => setTerm(e.target.value)}
