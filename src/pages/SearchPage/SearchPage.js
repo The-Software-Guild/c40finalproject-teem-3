@@ -10,7 +10,6 @@ export function SearchPage() {
     const term = params.get('find_desc');
     const locationParam = params.get('find_loc');
     const [businesses, amountResults, searchParams, setSearchParams] = useBusinessSearch(term, locationParam);
-    
     return(
         <div>
             <SearchResultsSummary 
