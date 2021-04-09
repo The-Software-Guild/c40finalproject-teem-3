@@ -5,6 +5,7 @@ import * as am4maps from "@amcharts/amcharts4/maps"
 import am4geodata_usaLow from "@amcharts/amcharts4-geodata/usaLow";
 import am4themes_animated from "@amcharts/amcharts4/themes/animated";
 import axios from 'axios';
+import { API_Key_Const } from "../pages/hooks/yelp-api/config_api";
 
 am4core.useTheme(am4themes_animated);
 
@@ -40,6 +41,8 @@ class InteractiveMap extends React.Component {
     }
 
     componentDidMount() {
+        let Bearer = 'Bearer ' + API_Key_Const; 
+
         console.log("App is now mounted.")
         this.setState({ loading: true })
         console.log("Loading businesses data")
@@ -50,7 +53,7 @@ class InteractiveMap extends React.Component {
                 axios.get(path,
                     {
                         headers: {
-                            'Authorization': 'Bearer TN1_Qg2qSyxlLk1bkJvfn7rWM57xfDyHSVrC90jfpRAB6hiJ74bbBwVofqYc9vTJJwjt0JyzgfIfjp-TxMvkIdz5EcQlAcaQ3E8u3fQruTvDYBjfXsW_UsVe2CxvYHYx',
+                            'Authorization': Bearer,
                             'Access-Control-Allow-Origin': '*',
                             'Content-Type': 'application/json',
                             "accepts": "application/json"
