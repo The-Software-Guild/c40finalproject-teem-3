@@ -34,7 +34,7 @@ class InteractiveMap extends React.Component {
                 axios.get(path,
                     {
                         headers: {
-                            'Authorization': 'Bearer 8bzvw3fDl9VH96QencxdFeUK6t-ksZvnbMU0qwTHPQuMdmrqb79ky71zkLbRpUeBifjtOtgYN9UJOxpVHPgIvqG_WK3Rj-gpVQCcvoB21lRsKKWODk-sA9ZxMWlrYHYx',
+                            'Authorization': 'Bearer ',
                             'Access-Control-Allow-Origin': '*',
                             'Content-Type': 'application/json',
                             "accepts": "application/json"
